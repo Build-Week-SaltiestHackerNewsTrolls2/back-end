@@ -4,7 +4,7 @@
 
 Base URL = https://
 
-1. Comment Routes~~ RestAPI ~~ See Charts for Endpoints
+1. Creation/Login Flow ~~ RestAPI ~~ See Charts for Endpoints
 
 |      Endpoints       | Method|            Other                |
 | :------------------: | :----:| :-----------------------------: |
@@ -12,7 +12,7 @@ Base URL = https://
 |   /auth/login        |  POST |  Logins a User with Token       |
 
 
-2. User Routes~~ RestAPI ~~ See Chart for Endpoints
+2. User Routes ~~ RestAPI ~~ See Chart for Endpoints
 
 
 |      Endpoints       | Method|            Other                |
@@ -22,7 +22,7 @@ Base URL = https://
 |      /newUser/:id    | PUT   |        Edits a User             |
 |      /newUser/:id    |DELETE |        Deletes a User           |
 
-3. Comment Routes~~ RestAPI ~~ See Chart for Endpoints
+3. Comment Routes ~~ RestAPI ~~ See Chart for Endpoints
 
 |      Endpoints       | Method|            Other                |
 | :------------------: | :----:| :-----------------------------: |
