@@ -9,5 +9,5 @@ module.exports = (req, res, next) => {
 				err ? res.status(401).json({ error: 'Not Authorized Invalid Creds' }) : (req.decodedToken = decodedToken)
 				next()
 		  })
-		: res.status(400).json({ error: 'Please provide a username and password' })
+		: res.status(400).json({ error: 'Please provide an email and password' })
 }
