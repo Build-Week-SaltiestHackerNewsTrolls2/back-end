@@ -1,9 +1,9 @@
 
 
-module.exports = {
-	get,
-  getById,
-  add,
-	update,
-	erase,
-}
+// module.exports = {
+// 	get,
+//   getById,
+//   add,
+// 	update,
+// 	erase,
+// }
