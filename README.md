@@ -1,8 +1,11 @@
 # Troll Hub API
 
 ---
+*Published URL = https://troll-hub.herokuapp.com/*
 
-Base URL = https://troll-hub.herokuapp.com/
+--- 
+
+__Base URL = https://troll-hub.herokuapp.com/api__
 
 1. Creation/Login Flow ~~ RestAPI ~~ See Charts for Endpoints
 
