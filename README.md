@@ -1,8 +1,8 @@
-# SaltiestHackerNewsTrolls2 || Troll Hub API
+# Troll Hub API
 
 ---
 
-Base URL = https://
+Base URL = https://troll-hub.herokuapp.com/
 
 1. Creation/Login Flow ~~ RestAPI ~~ See Charts for Endpoints
 
