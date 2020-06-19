@@ -12,7 +12,7 @@ server.use('/api/auth', authRouter)
 server.use('/api/newUser', auth, userRouter)
  
 server.get('/', (req, res) => {
-	res.status(200).json({ Message: 'Welcome SaltiestHackerNewsTrolls2 API' })
+	res.status(200).json({ Message: 'Welcome the Troll Hub API' })
 })
 
 module.exports = server
