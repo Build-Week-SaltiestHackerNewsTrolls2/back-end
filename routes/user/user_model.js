@@ -19,6 +19,12 @@ const erase = (id) => {
 return db('newUser').where('id', id).del()
 }
 
+const getUserFavs = (userId) => {
+  return db.select('s.comment', 's.name', 's.score')
+    .from('saved as s')
+    .join('newUser as n', 'n.id', 's.newUser_id')
+    .where('s.newUser_id', userId)
+}
 
 
 
@@ -26,5 +32,6 @@ return db('newUser').where('id', id).del()
   get,
   getById,
   update,
-  erase,
+   erase,
+  getUserFavs,
  }

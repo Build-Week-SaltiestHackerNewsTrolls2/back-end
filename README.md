@@ -7,13 +7,20 @@
 Schemas 
 User Schema: 
 { 
-  fistName: string,
+  firstName: string,
   lastName: string,
   email: string,
   country: string,
   password: string,
 
 }
+
+Comments Schema: 
+{ 
+ name: string
+ comment:string
+ score:string
+} 
 
 __Base URL = https://troll-hub.herokuapp.com/api__
 
@@ -32,6 +39,7 @@ __Base URL = https://troll-hub.herokuapp.com/api__
 | :------------------: | :----:| :-----------------------------: |
 |      /newUser        | GET   |     Gets a List of Users        |
 |      /newUser/:id    | GET   |      Gets a User By Id          |
+|      /:id/favorites  | GET   |      Gets a Users Favorite Comment |
 |      /newUser/:id    | PUT   |        Edits a User             |
 |      /newUser/:id    |DELETE |        Deletes a User           |
 
@@ -39,8 +47,12 @@ __Base URL = https://troll-hub.herokuapp.com/api__
 
 |      Endpoints       | Method|            Other                |
 | :------------------: | :----:| :-----------------------------: |
-|                      |       |                                 |
-|                      |       |                                 |
-|                      |       |                                 |
-|                      |       |                                 |
+|    /comments         |  GET  | Gets all Comments for DS API    |
 
+4. Favorites Comment Routes ~~RestAPI ~~ See Chart for Endpoints
+
+|      Endpoints       | Method|            Other                |
+| :------------------: | :----:| :-----------------------------: |
+|    /favorites        |  GET  |   Gets a Comment By ID          |
+|    /favorites        | POST  |   Saves A Comment to UserFavs   |
+|    /favorites/:id    | DELETE |  Deletes a Comment             |
