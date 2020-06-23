@@ -7,13 +7,20 @@
 Schemas 
 User Schema: 
 { 
-  fistName: string,
+  firstName: string,
   lastName: string,
   email: string,
   country: string,
   password: string,
 
 }
+
+Comments Schema: 
+{ 
+ name: string
+ comment:string
+ score:string
+} 
 
 __Base URL = https://troll-hub.herokuapp.com/api__
 
