@@ -53,7 +53,7 @@ router.post('/login', (req, res) => {
 		regUser.findBy({ email: email })
 			.then(([user]) => {
 				// compare the password the hash stored in the database
-				if (user || bcryptjs.compareSync(password, user.password)) {
+				if (user && bcryptjs.compareSync(password, user.password)) {
 					const token = generateToken(user)
 					res.status(200).json({ message: 'Welcome to our API', newUser_id:user.id, token: token })
 				} else {
