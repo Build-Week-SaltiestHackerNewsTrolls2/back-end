@@ -17,6 +17,19 @@ router.get('/', (req, res) => {
 		})
 })
 
+router.get('/:id/favorites', validUserId, (req, res) => {
+	const { id } = req.params
+
+	Users.getUserFavs(id)
+		.then((data) => {
+			data ? res.status(200).json(data) : null
+		})
+		.catch((err) => {
+			res.status(500).json({ error: 'You found me but I cannot provide any info, try again!', err })
+		})
+})
+
+
 router.get('/:id', validUserId, (req, res) => {
 	const { id } = req.params
 	Users.getById(id)
