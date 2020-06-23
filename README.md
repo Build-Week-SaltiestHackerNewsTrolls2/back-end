@@ -4,6 +4,16 @@
 *Published URL = https://troll-hub.herokuapp.com/*
 
 --- 
+Schemas 
+User Schema: 
+{ 
+  fistName: string,
+  lastName: string,
+  email: string,
+  country: string,
+  password: string,
+
+}
 
 __Base URL = https://troll-hub.herokuapp.com/api__
 
