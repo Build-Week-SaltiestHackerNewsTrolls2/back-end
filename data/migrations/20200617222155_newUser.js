@@ -13,7 +13,7 @@ exports.up = function (knex) {
 			tbl.increments()
 			tbl.string('name', 255).notNullable
 			tbl.string('comment', 255).notNullable
-			tbl.string('score', 255)
+			tbl.integer('score')
 			tbl.integer('newUser_id')
 				.unsigned()
 				.notNullable()

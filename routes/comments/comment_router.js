@@ -8,7 +8,7 @@ router.get('/topfive', (req, res) => {
 	}
 
 	axios
-		.get('https://salty-flask-app.herokuapp.com/topfive ', requestOptions)
+		.get('https://salty-flask-app.herokuapp.com/users', requestOptions)
 		.then((response) => {
 			res.status(200).json(response.data)
 			response.data.insert('./db/temp.db3')
