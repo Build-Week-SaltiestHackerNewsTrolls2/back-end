@@ -3,9 +3,15 @@ const router = express.Router()
 const Comments = require('./saved_model')
 
 
-
-
-
+router.get("/", (req, res) => {
+	Comments.get()
+		.then((comment) => {
+			res.status(200).json(comment)
+		})
+		.catch((err) => {
+			res.status(500).json({ error: 'You were unable to get info from the database!' })
+		})
+})
 
 router.get('/:id', (req, res) => {
 	const { id } = req.params
