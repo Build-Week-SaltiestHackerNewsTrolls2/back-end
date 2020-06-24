@@ -2,16 +2,16 @@ const axios = require('axios')
 const express = require('express')
 const router = express.Router()
 
-router.get('/topfive', (req, res) => {
-	const requestOptions = {
-		headers: { accept: 'application/json' },
-	}
-
+router.get('/', (req, res) => {
+		const requestOptions = {
+			headers: { accept: 'application/json' },
+		}
+   
 	axios
-		.get('https://salty-flask-app.herokuapp.com/users', requestOptions)
+		.get(`https://salty-flask-app.herokuapp.com/users`, requestOptions)
 		.then((response) => {
+			
 			res.status(200).json(response.data)
-			response.data.insert('./db/temp.db3')
 		})
 		.catch((err) => {
 			res.status(500).json({ error: 'You were unable to get info from the database!' })
@@ -33,4 +33,5 @@ router.get('/saltyscore/:name', (req, res) => {
 		})
 })
 
-module.exports = router
+
+https: module.exports = router
