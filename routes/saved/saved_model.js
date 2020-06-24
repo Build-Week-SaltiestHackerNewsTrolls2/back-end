@@ -3,12 +3,9 @@ const db = require('../../data/dbConfig')
 
 
 
-// const get = () => {
-//   return db
-//     .select('comment')
-//     .from('saved')
-//     .join('newUser', 'saved.newUser_id', 'newUser.id')
-// }
+const get = () => {
+  return db('saved')
+}
 
 const getById = (id) => {
 	return db('saved').where({ id }).first()
@@ -28,7 +25,7 @@ const erase = (id) => {
 
 module.exports = {
   
-	// get,
+	get,
 	add,
 	getById,
 	erase,
