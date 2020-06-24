@@ -22,7 +22,7 @@ return db('newUser').where('id', id).del()
 const getUserFavs = (userId) => {
   return db.select('*')
     .from('saved as s')
-    .join('newUser as n', 'n.id', 's.newUser_id')
+    .innerJoin('newUser as n','s.id','n.id')
     .where('s.newUser_id', userId, )
 }
 
