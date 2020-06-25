@@ -11,7 +11,7 @@ exports.up = function (knex) {
 		})
 		.createTable('saved', (tbl) => {
 			tbl.increments()
-			tbl.string('name', 255).notNullable
+			tbl.string('username', 255).notNullable
 			tbl.string('comment', 255).notNullable
 			tbl.integer('score')
 			tbl.integer('newUser_id')
@@ -22,6 +22,25 @@ exports.up = function (knex) {
 				.onUpdate('CASCADE')
 				.onDelete('CASCADE')
 		})
+		.createTable('user_save_comments', (tbl) => {
+		tbl.increments()
+		tbl
+			.integer('saved_id')
+			.unsigned()
+			.notNullable()
+			.references('id')
+			.inTable('saved')
+			.onUpdate('CASCADE')
+			.onDelete('CASCADE')
+			tbl
+				.integer('newUser_id')
+				.unsigned()
+				.notNullable()
+				.references('id')
+				.inTable('newUser')
+				.onUpdate('CASCADE')
+				.onDelete('CASCADE')
+	})
 }
 
 exports.down = function (knex, Promise) {
