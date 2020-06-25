@@ -23,7 +23,7 @@ const getUserFavs = (userId) => {
 	return db
 		.select('*')
 		.from('saved as s')
-		.innerJoin('newUser as n', 'n.id', 's.id')
+		.join('newUser as n', 'n.id', 's.newUser_id')
 		.where('s.newUser_id', userId)
 }
 
