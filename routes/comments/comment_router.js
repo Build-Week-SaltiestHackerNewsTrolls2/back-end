@@ -18,13 +18,13 @@ router.get('/', (req, res) => {
 		})
 })
 
-router.get('/saltyscore/:name', (req, res) => {
+router.get('/user_comments/:name', (req, res) => {
 	const requestOptions = {
 		headers: { accept: 'application/json' },
 	}
    const {name} = req.params
 	axios
-		.get(`https://salty-flask-app.herokuapp.com/saltyscore/${name}`, requestOptions)
+		.get(`https://salty-flask-app.herokuapp.com/comment/${name}`, requestOptions)
 		.then((response) => {
 			res.status(200).json(response.data)
 		})
