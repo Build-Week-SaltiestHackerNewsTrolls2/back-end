@@ -44,6 +44,5 @@ exports.up = function (knex) {
 }
 
 exports.down = function (knex, Promise) {
-	return knex.schema.dropTableIfExists('saved')
-		.dropTableIfExists('newUser')
+	return knex.schema.dropTableIfExists('saved').dropTableIfExists('saved').dropTableIfExists('newUser')
 }

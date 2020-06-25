@@ -21,8 +21,9 @@ const add = (comment) => {
 
 const erase = (id) => {
 	return db('user_save_comments as u')
-    .innerJoin('*')
-    .where('u.saved_id', 'comment' ).andWhere('u.newUser_id', id).del()
+		.innerJoin('s.*')
+		.from('saved as s')
+    .where('u.saved_id','u.newUser_id', id).del()
 }
 
 module.exports = {
