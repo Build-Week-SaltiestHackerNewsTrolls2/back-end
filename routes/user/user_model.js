@@ -20,11 +20,11 @@ return db('newUser').where('id', id).del()
 }
 
 const getUserFavs = (id) => {
-	return db
-		.select('*')
-		.from('saved as s')
-		.join('newUser as n', 'n.id', 's.newUser_id')
-		.where('s.id', id)
+  return db.select('s.*')
+    .from('saved as s')
+    .join('newUser as n','n.id','s.newUser_id')
+    .where('n.id', id)
+    
 }
 
 
