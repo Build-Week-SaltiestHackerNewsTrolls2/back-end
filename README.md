@@ -47,12 +47,13 @@ __Base URL = https://troll-hub.herokuapp.com/api__
 
 |      Endpoints       | Method|            Other                |
 | :------------------: | :----:| :-----------------------------: |
-|    /comments         |  GET  | Gets all Comments for DS API    |
+|    /comments         |  GET  | Gets all Users for DS API    |
+| /comments/user_comments/:name|GET| Gets comments for a user |
 
 4. Favorites Comment Routes ~~RestAPI ~~ See Chart for Endpoints
 
 |      Endpoints       | Method|            Other                |
 | :------------------: | :----:| :-----------------------------: |
 |   /favorites:id        |  GET  |   Gets a Comment By ID          |
-|    /favorites        | POST  |   Saves A Comment to UserFavs   |
+|    /favorites        | POST  |   Saves A Comment to User Favs   |
 |    /favorites/:favorites.id    | DELETE |  Deletes a Comment             |
