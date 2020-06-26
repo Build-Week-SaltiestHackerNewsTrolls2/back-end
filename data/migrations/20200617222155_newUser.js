@@ -22,27 +22,8 @@ exports.up = function (knex) {
 				.onUpdate('CASCADE')
 				.onDelete('CASCADE')
 		})
-		.createTable('user_save_comments', (tbl) => {
-		tbl.increments()
-		tbl
-			.integer('saved_id')
-			.unsigned()
-			.notNullable()
-			.references('id')
-			.inTable('saved')
-			.onUpdate('CASCADE')
-			.onDelete('CASCADE')
-			tbl
-				.integer('newUser_id')
-				.unsigned()
-				.notNullable()
-				.references('id')
-				.inTable('newUser')
-				.onUpdate('CASCADE')
-				.onDelete('CASCADE')
-	})
 }
 
 exports.down = function (knex, Promise) {
-	return knex.schema.dropTableIfExists('saved').dropTableIfExists('saved').dropTableIfExists('newUser')
+	return knex.schema.dropTableIfExists('saved').dropTableIfExists('newUser')
 }

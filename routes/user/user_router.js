@@ -17,7 +17,7 @@ router.get('/', (req, res) => {
 		})
 })
 
-router.get('/:id/favorites', validUserId, (req, res) => {
+router.get('/:id/favorites', (req, res) => {
 	const { id } = req.params
 
 	Users.getUserFavs(id)
