@@ -12,7 +12,7 @@ const savedCommentRouter = require('../routes/saved/saved_router')
 server.use(helmet(), morgan('dev'), express.json(), cors())
 server.use('/api/auth', authRouter)
 server.use('/api/newUser', auth, userRouter)
-server.use('/api/comments', auth, commentRouter)
+server.use('/api/comments', commentRouter)
 server.use('/api/favorites',auth,  savedCommentRouter)
  
 server.get('/', (req, res) => {
