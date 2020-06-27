@@ -4,5 +4,5 @@ const server = require('./api/server')
 const port = process.env.PORT
 
 server.listen(port, () => {
-	console.log(`\n*^^*~~Server Alive on PORT:${port} ~~*^^*`)
+	console.log(`*^^*~~Server Alive on PORT:${port} ~~*^^*`)
 })
