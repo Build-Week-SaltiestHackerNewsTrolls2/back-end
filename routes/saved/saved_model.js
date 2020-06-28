@@ -7,13 +7,13 @@ const get = () => {
   return db('saved')
 }
 
-const getById = (id) => {
+function getById(id) {
 	return db('saved').where({ id }).first()
 }
 
-const add = (comment) => {
+function add(comment) {
 	return db('saved')
-		.insert( comment, 'id' )
+		.insert(comment, 'id')
 		.then((ids) => {
 			return getById(ids[0])
 		})

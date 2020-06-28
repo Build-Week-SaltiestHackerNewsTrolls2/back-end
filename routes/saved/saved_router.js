@@ -26,7 +26,8 @@ router.get('/:id', (req, res) => {
 
 
 router.post('/', (req, res) => {
-	Comments.add(req.body)
+	Comments
+	  .add(req.body)
 		.then((comment) => {
 			res.status(201).json({ message: 'A New Issue was Discovered', comment })
 		})
