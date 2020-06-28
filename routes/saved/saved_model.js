@@ -13,7 +13,7 @@ function getById(id) {
 
 function add(comment) {
 	return db('saved')
-		.insert(comment, 'id')
+		.insert(comment, 'id' 'newUser_id')
 		.then((ids) => {
 			return getById(ids[0])
 		})
