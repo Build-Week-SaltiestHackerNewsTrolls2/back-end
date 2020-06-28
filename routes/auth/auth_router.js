@@ -19,7 +19,7 @@ const generateToken = (user) => {
 
 router.post('/register', (req, res) => {
   const { email, password, country, firstName, lastName } = req.body
-  const rounds = process.env.BCRYPT_ROUNDS || 8
+  const rounds = process.env.BCRYPT_ROUNDS
   const hash = bcryptjs.hashSync(password, rounds)
   const userObject = {
     firstName: firstName,
