@@ -29,7 +29,7 @@ router.post('/', (req, res) => {
 	Comments
 	  .add(req.body)
 		.then((comment) => {
-			res.status(201).json({ message: 'A New Issue was Discovered', comment })
+			res.status(201).json({ message: 'A New Comment was Saved', comment })
 		})
 		.catch((error) => {
 			res.status(500).json({ error: 'You were unable to get info from the database!' })
