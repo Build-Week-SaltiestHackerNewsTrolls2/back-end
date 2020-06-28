@@ -13,8 +13,8 @@ const getById = (id) => {
 
 const add = (comment) => {
 	return db('saved')
-		.insert(['id', comment])
-		.where('id')
+		.returning('id')
+		.insert( comment)
 		.then((ids) => {
 			return getById(ids[0])
 		})
